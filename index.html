@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru" data-page="index">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Калькулятор перевода размеров одежды и обуви: EU, US, UK, CN и другие системы. Быстро и удобно." />
+    <title>Конвертер размеров одежды и обуви</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">SizeFinder</a>
+            <nav class="nav-links" id="navLinks">
+                <a id="navHome" href="index.html" class="active">Главная</a>
+                <a id="navClothing" href="clothing.html">Одежда</a>
+                <a id="navAccessories" href="accessories.html">Аксессуары</a>
+            </nav>
+            <div class="header-actions">
+                <label class="language-switcher">
+                    <span id="langLabel">Язык</span>
+                    <select id="languageSelect">
+                        <option value="ru">RU</option>
+                        <option value="en">EN</option>
+                        <option value="fr">FR</option>
+                        <option value="nl">NL</option>
+                    </select>
+                </label>
+                <button class="menu-toggle" id="menuToggle" aria-label="Меню">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="hero-banner">
+            <div class="hero-copy">
+                <span id="heroEyebrow" class="eyebrow">Конвертер размеров</span>
+                <h1 id="heroTitle">Размеры одежды и обуви</h1>
+                <p id="heroDescription">EU, US, UK, CN, JP, KR, AU, CA, MX, BR, IN и другие системы — всё в одном месте.</p>
+                <div class="hero-actions">
+                    <a id="openCalcBtn" href="clothing.html" class="btn btn-primary">Одежда</a>
+                    <a id="tableBtn" href="accessories.html" class="btn btn-secondary">Аксессуары</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="flag-strip">
+                    <span class="country-icon">🇪🇺</span>
+                    <span class="country-icon">🇺🇸</span>
+                    <span class="country-icon">🇬🇧</span>
+                    <span class="country-icon">🇨🇳</span>
+                    <span class="country-icon">🇯🇵</span>
+                    <span class="country-icon">🇰🇷</span>
+                    <span class="country-icon">🇦🇺</span>
+                    <span class="country-icon">🇨🇦</span>
+                    <span class="country-icon">🇲🇽</span>
+                    <span class="country-icon">🇧🇷</span>
+                    <span class="country-icon">🇮🇳</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel section-card">
+            <div class="section-header">
+                <h2 id="section1Title">Параметры перевода</h2>
+                <p id="section1Desc">Выберите тип, систему и размер — калькулятор покажет соответствия во всех основных странах.</p>
+            </div>
+
+            <div class="control-grid">
+                <label>
+                    <span id="categoryLabel">Тип перевода</span>
+                    <select id="categorySelect">
+                        <option value="shoes">Обувь</option>
+                        <option value="clothing">Одежда</option>
+                    </select>
+                </label>
+                <label>
+                    <span id="genderLabel">Пол / категория</span>
+                    <select id="genderSelect">
+                        <option value="men">Мужское</option>
+                        <option value="women">Женское</option>
+                        <option value="kids">Детское</option>
+                    </select>
+                </label>
+                <label>
+                    <span id="systemLabel">Система размера</span>
+                    <select id="sizeSystemSelect"></select>
+                </label>
+                <label>
+                    <span id="sizeLabel">Ваш размер</span>
+                    <input id="sizeInput" type="text" placeholder="Например 42 или 8.5" />
+                </label>
+                <button id="convertBtn" class="btn btn-primary btn-full">Перевести</button>
+            </div>
+
+            <div id="resultCard" class="result-card hidden">
+                <h3>Результаты перевода</h3>
+                <div id="resultList" class="result-list"></div>
+                <p id="resultNote" class="result-note"></p>
+            </div>
+        </section>
+
+        <section id="chart" class="panel section-card">
+            <div class="section-header">
+                <h2 id="section2Title">Основные таблицы соответствий</h2>
+                <p id="section2Desc">Быстрый доступ к наиболее популярным соответствиям для одежды и обуви.</p>
+            </div>
+
+            <div class="table-wrapper">
+                <h3 id="clothingTitle">Одежда</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="clothingH1">EU</th>
+                            <th id="clothingH2">US</th>
+                            <th id="clothingH3">UK</th>
+                            <th id="clothingH4">FR</th>
+                            <th id="clothingH5">CN</th>
+                            <th id="clothingH6">Межд.</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clothingTableBody"></tbody>
+                </table>
+            </div>
+
+            <div class="table-wrapper">
+                <h3 id="shoesTitle">Обувь</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="shoesH1">EU</th>
+                            <th id="shoesH2">US</th>
+                            <th id="shoesH3">UK</th>
+                            <th id="shoesH4">CN</th>
+                            <th id="shoesH5">Пол</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shoesTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
