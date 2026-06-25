@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru" data-page="shoes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Конвертер размеров обуви. Мужская, женская и детская обувь: EU, US, UK, CN и другие системы." />
+    <title>SizeFinder — Обувь</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" id="brand" href="index.html">SizeFinder</a>
+            <nav class="nav-links" id="navLinks">
+                <a id="navHome" href="index.html">Главная</a>
+                <a id="navClothing" href="clothing.html">Одежда</a>
+                <a id="navShoes" href="shoes.html" class="active">Обувь</a>
+                <a id="navAccessories" href="accessories.html">Аксессуары</a>
+            </nav>
+            <div class="header-actions">
+                <label class="language-switcher">
+                    <span id="langLabel">Язык</span>
+                    <select id="languageSelect">
+                        <option value="ru">RU</option>
+                        <option value="en">EN</option>
+                        <option value="fr">FR</option>
+                        <option value="nl">NL</option>
+                    </select>
+                </label>
+                <button class="menu-toggle" id="menuToggle" aria-label="Меню">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="hero-banner">
+            <div class="hero-copy">
+                <span id="heroEyebrow" class="eyebrow" data-translate="shoesPageTitle">Страница обуви</span>
+                <h1 id="heroTitle" data-translate="shoesPageTitle">Конвертер размеров обуви</h1>
+                <p id="heroDescription" data-translate="shoesPageDesc">Мужская, женская и детская обувь — EU, US, UK, CN и другие системы.</p>
+            </div>
+            <div class="hero-visual">
+                <div class="flag-strip">
+                    <span class="country-icon">👟</span>
+                    <span class="country-icon">👠</span>
+                    <span class="country-icon">👞</span>
+                    <span class="country-icon">👶</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel section-card">
+            <div class="section-header">
+                <h2 id="section1Title" data-translate="shoesCalcTitle">Калькулятор обуви</h2>
+                <p id="section1Desc" data-translate="shoesCalcDesc">Выберите категорию, систему и размер, чтобы получить полное соответствие.</p>
+            </div>
+
+            <div class="calc-grid">
+                <label>
+                    <span id="categoryLabel" data-translate="categoryLabel">Категория</span>
+                    <select id="shoesCategory">
+                        <option value="men">Мужская</option>
+                        <option value="women">Женская</option>
+                        <option value="kids">Детская</option>
+                    </select>
+                </label>
+                <label>
+                    <span id="systemLabel" data-translate="systemLabel">Система</span>
+                    <select id="shoesSystem"></select>
+                </label>
+                <label>
+                    <span id="sizeLabel" data-translate="sizeLabel">Размер</span>
+                    <input id="shoesSize" type="text" placeholder="42, 34, 8.5" />
+                </label>
+                <button id="convertShoesBtn" class="btn btn-primary btn-full" data-translate="convertBtn">Перевести размер</button>
+            </div>
+
+            <div id="shoesResult" class="result-block hidden">
+                <h3 id="shoesResultTitle" data-translate="resultTitle">Результат</h3>
+                <div id="shoesResultList" class="result-list"></div>
+                <p id="shoesResultNote" class="result-note"></p>
+            </div>
+                <p id="shoesResultNote" class="result-note"></p>
+            </div>
+        </section>
+
+        <section class="panel section-card">
+            <div class="section-header">
+                <h2 id="tableTitle" data-translate="shoesTableTitle">Таблица размеров</h2>
+                <p id="tableDesc" data-translate="shoesTableDesc">Сравнение размеров обуви по категориям и системам.</p>
+            </div>
+
+            <div class="table-wrapper">
+                <h3 id="menShoesTitle">Мужская обувь</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>EU</th>
+                            <th>US</th>
+                            <th>UK</th>
+                            <th>CN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shoesTableBodyMen"></tbody>
+                </table>
+            </div>
+
+            <div class="table-wrapper">
+                <h3 id="womenShoesTitle">Женская обувь</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>EU</th>
+                            <th>US</th>
+                            <th>UK</th>
+                            <th>CN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shoesTableBodyWomen"></tbody>
+                </table>
+            </div>
+
+            <div class="table-wrapper">
+                <h3 id="kidsShoesTitle">Детская обувь</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>EU</th>
+                            <th>US</th>
+                            <th>UK</th>
+                            <th>CN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shoesTableBodyKids"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
