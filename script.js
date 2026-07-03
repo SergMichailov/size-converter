@@ -92,12 +92,18 @@ const pageType = document.documentElement.dataset.page || "index";
 
 const translations = {
     ru: {
-        heroEyebrow: "Размеры одежды и обуви",
-        title: "Конвертер размеров",
-        description: "Переводите европейские, американские, английские, китайские размеры одежды и обуви за секунды.",
-        openCalculator: "Открыть калькулятор",
-        tableSizes: "Таблица размеров",
+        // Навигация
+        navHome: "Главная",
+        navClothing: "Одежда",
+        navAccessories: "Аксессуары",
         language: "Язык",
+        
+        // Главная страница
+        heroEyebrow: "Конвертер размеров",
+        title: "Размеры одежды и обуви",
+        description: "EU, US, UK, CN, JP, KR, AU, CA, MX, BR, IN и другие системы — всё в одном месте.",
+        openCalculator: "Одежда",
+        tableSizes: "Аксессуары",
         section1Title: "Параметры перевода",
         section1Desc: "Выберите тип, систему и размер — калькулятор покажет соответствия во всех основных странах.",
         categoryLabel: "Тип перевода",
@@ -114,6 +120,8 @@ const translations = {
         shoesHeaders: ["EU", "US", "UK", "CN", "Пол"],
         categoryOptions: ["Обувь", "Одежда"],
         genderOptions: ["Мужское", "Женское", "Детское"],
+        
+        // Страница аксессуаров
         accessories: {
             heroEyebrow: "Страница аксессуаров",
             heroTitle: "Калькулятор аксессуаров",
@@ -138,6 +146,8 @@ const translations = {
             glovePlaceholder: "Например 18 см",
             hatPlaceholder: "Например 57 см"
         },
+        
+        // Страница одежды
         clothing: {
             heroEyebrow: "Страница одежды",
             heroTitle: "Конвертер размеров одежды",
@@ -157,19 +167,25 @@ const translations = {
             womenTable: "Женская одежда",
             kidsTable: "Детская одежда"
         },
+        
         messages: {
             enterSize: "Введите размер для перевода.",
             notFound: "Мы не нашли точное соответствие. Попробуйте другой размер или систему.",
             resultNote: "Результаты приведены для более точного сравнения между системами размеров."
         }
     },
+    
     en: {
-        heroEyebrow: "Clothing & shoe sizes",
-        title: "Size converter",
-        description: "Convert clothing and shoe sizes between EU, US, UK, CN and more.",
-        openCalculator: "Open calculator",
-        tableSizes: "Size chart",
+        navHome: "Home",
+        navClothing: "Clothing",
+        navAccessories: "Accessories",
         language: "Language",
+        
+        heroEyebrow: "Size Converter",
+        title: "Clothing & Shoe Sizes",
+        description: "EU, US, UK, CN, JP, KR, AU, CA, MX, BR, IN and more — all in one place.",
+        openCalculator: "Clothing",
+        tableSizes: "Accessories",
         section1Title: "Conversion settings",
         section1Desc: "Select type, system and size — the calculator will show matching sizes across major countries.",
         categoryLabel: "Conversion type",
@@ -186,6 +202,7 @@ const translations = {
         shoesHeaders: ["EU", "US", "UK", "CN", "Gender"],
         categoryOptions: ["Shoes", "Clothing"],
         genderOptions: ["Men", "Women", "Kids"],
+        
         accessories: {
             heroEyebrow: "Accessories Page",
             heroTitle: "Accessories Calculator",
@@ -210,6 +227,7 @@ const translations = {
             glovePlaceholder: "E.g. 18 cm",
             hatPlaceholder: "E.g. 57 cm"
         },
+        
         clothing: {
             heroEyebrow: "Clothing Page",
             heroTitle: "Clothing Size Converter",
@@ -229,19 +247,25 @@ const translations = {
             womenTable: "Women's Clothing",
             kidsTable: "Kids Clothing"
         },
+        
         messages: {
             enterSize: "Enter a size to convert.",
             notFound: "No exact match found. Try another size or system.",
             resultNote: "Results are shown for better comparison across size systems."
         }
     },
+    
     fr: {
-        heroEyebrow: "Tailles vêtements et chaussures",
-        title: "Convertisseur de tailles",
-        description: "Convertissez les tailles de vêtements et de chaussures entre EU, US, UK, CN et plus.",
-        openCalculator: "Ouvrir le calculateur",
-        tableSizes: "Tableau des tailles",
+        navHome: "Accueil",
+        navClothing: "Vêtements",
+        navAccessories: "Accessoires",
         language: "Langue",
+        
+        heroEyebrow: "Convertisseur de tailles",
+        title: "Tailles de vêtements et chaussures",
+        description: "EU, US, UK, CN, JP, KR, AU, CA, MX, BR, IN et plus — tout en un seul endroit.",
+        openCalculator: "Vêtements",
+        tableSizes: "Accessoires",
         section1Title: "Paramètres de conversion",
         section1Desc: "Sélectionnez le type, le système et la taille — le calculateur affichera les correspondances dans les principaux pays.",
         categoryLabel: "Type de conversion",
@@ -258,6 +282,7 @@ const translations = {
         shoesHeaders: ["EU", "US", "UK", "CN", "Genre"],
         categoryOptions: ["Chaussures", "Vêtements"],
         genderOptions: ["Homme", "Femme", "Enfants"],
+        
         accessories: {
             heroEyebrow: "Page des accessoires",
             heroTitle: "Calculateur d'accessoires",
@@ -282,6 +307,7 @@ const translations = {
             glovePlaceholder: "Par ex. 18 cm",
             hatPlaceholder: "Par ex. 57 cm"
         },
+        
         clothing: {
             heroEyebrow: "Page des vêtements",
             heroTitle: "Convertisseur de tailles de vêtements",
@@ -301,19 +327,25 @@ const translations = {
             womenTable: "Vêtements femmes",
             kidsTable: "Vêtements enfants"
         },
+        
         messages: {
             enterSize: "Entrez une taille à convertir.",
             notFound: "Aucune correspondance exacte trouvée. Essayez une autre taille ou un autre système.",
             resultNote: "Les résultats sont affichés pour une meilleure comparaison entre les systèmes de taille."
         }
     },
+    
     nl: {
-        heroEyebrow: "Kleding- & schoenmaten",
-        title: "Maatconverter",
-        description: "Converteer kleding- en schoenmaten tussen EU, US, UK, CN en meer.",
-        openCalculator: "Open rekenmachine",
-        tableSizes: "Maattabel",
+        navHome: "Home",
+        navClothing: "Kleding",
+        navAccessories: "Accessoires",
         language: "Taal",
+        
+        heroEyebrow: "Maatconverter",
+        title: "Kleding- & schoenmaten",
+        description: "EU, US, UK, CN, JP, KR, AU, CA, MX, BR, IN en meer — alles op één plek.",
+        openCalculator: "Kleding",
+        tableSizes: "Accessoires",
         section1Title: "Conversie-instellingen",
         section1Desc: "Selecteer type, systeem en maat — de rekenmachine toont overeenkomende maten in belangrijke landen.",
         categoryLabel: "Conversietype",
@@ -330,6 +362,7 @@ const translations = {
         shoesHeaders: ["EU", "US", "UK", "CN", "Geslacht"],
         categoryOptions: ["Schoenen", "Kleding"],
         genderOptions: ["Heren", "Dames", "Kinderen"],
+        
         accessories: {
             heroEyebrow: "Accessoires Pagina",
             heroTitle: "Accessoires Calculator",
@@ -354,6 +387,7 @@ const translations = {
             glovePlaceholder: "Bijv. 18 cm",
             hatPlaceholder: "Bijv. 57 cm"
         },
+        
         clothing: {
             heroEyebrow: "Kleding Pagina",
             heroTitle: "Kleding Maatconverter",
@@ -373,6 +407,7 @@ const translations = {
             womenTable: "Dameskleding",
             kidsTable: "Kinderkleding"
         },
+        
         messages: {
             enterSize: "Voer een maat in om te converteren.",
             notFound: "Geen exacte overeenkomst gevonden. Probeer een andere maat of systeem.",
@@ -381,7 +416,7 @@ const translations = {
     }
 };
 
-// DOM Elements
+// DOM Elements - Главная страница
 const categorySelect = document.getElementById("categorySelect");
 const genderSelect = document.getElementById("genderSelect");
 const sizeSystemSelect = document.getElementById("sizeSystemSelect");
@@ -419,7 +454,7 @@ const shoesH3 = document.getElementById("shoesH3");
 const shoesH4 = document.getElementById("shoesH4");
 const shoesH5 = document.getElementById("shoesH5");
 
-// Clothing page elements
+// DOM Elements - Страница одежды
 const clothingCategory = document.getElementById("clothingCategory");
 const clothingSystem = document.getElementById("clothingSystem");
 const clothingSize = document.getElementById("clothingSize");
@@ -431,7 +466,7 @@ const clothingTableBodyMen = document.getElementById("clothingTableBody");
 const clothingTableBodyWomen = document.getElementById("clothingTableBodyWomen");
 const clothingTableBodyKids = document.getElementById("clothingTableBodyKids");
 
-// Accessories elements
+// DOM Elements - Страница аксессуаров
 const jeansW = document.getElementById("jeansW");
 const jeansL = document.getElementById("jeansL");
 const jeansBtn = document.getElementById("jeansBtn");
@@ -756,7 +791,6 @@ function applyAccessoriesTranslations(lang) {
     const acc = data.accessories;
     if (!acc) return;
 
-    // Hero section
     setText(document.getElementById("heroEyebrow"), acc.heroEyebrow);
     setText(document.getElementById("heroTitle"), acc.heroTitle);
     setText(document.getElementById("heroDescription"), acc.heroDescription);
@@ -817,12 +851,10 @@ function applyClothingTranslations(lang) {
     const cloth = data.clothing;
     if (!cloth) return;
 
-    // Hero section
     setText(document.getElementById("heroEyebrow"), cloth.heroEyebrow);
     setText(document.getElementById("heroTitle"), cloth.heroTitle);
     setText(document.getElementById("heroDescription"), cloth.heroDescription);
 
-    // Calculator
     if (section1Title) setText(section1Title, cloth.calculatorTitle);
     if (section1Desc) setText(section1Desc, cloth.calculatorDesc);
     
@@ -841,7 +873,6 @@ function applyClothingTranslations(lang) {
     
     if (convertClothingBtn) setText(convertClothingBtn, cloth.convertBtn);
 
-    // Tables
     const tableSection = document.querySelector('.section-card:last-child .section-header h2');
     if (tableSection) setText(tableSection, cloth.tableTitle);
     const tableDesc = document.querySelector('.section-card:last-child .section-header p');
@@ -859,6 +890,13 @@ function applyTranslations(lang) {
     const data = translations[lang] || translations.ru;
 
     document.documentElement.lang = lang;
+    
+    // Навигация
+    setText(document.getElementById("navHome"), data.navHome);
+    setText(document.getElementById("navClothing"), data.navClothing);
+    setText(document.getElementById("navAccessories"), data.navAccessories);
+    
+    // Hero секция
     setText(heroEyebrow, data.heroEyebrow);
     setText(heroTitle, data.title);
     setText(heroDescription, data.description);
